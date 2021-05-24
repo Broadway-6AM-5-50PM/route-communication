@@ -5,6 +5,7 @@ import Greet from "./Greet";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Counter from "./Counter";
 import Home from "./Home";
+import RenderArrays from "./RenderArrays";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Home />
           </Route>
           <Route exact path="/counter/:name" component={Counter} />
+          <Route exact path="/arrays" component={RenderArrays} />
         </Switch>
       </BrowserRouter>
     </>
