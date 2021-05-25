@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
+  myList: {
+    "& li": {
+      color: "#ffcc66",
+    },
+  },
+});
+
 const RenderArrays = () => {
+  const classes = useStyles();
   const [element, setElement] = useState("");
   const myConstArray = ["First Element", "Second Element", "Third Element"];
 
@@ -16,7 +27,7 @@ const RenderArrays = () => {
   return (
     <div>
       {console.log("value of array", myArray)}
-      <ul>
+      <ul className={classes.myList}>
         {myArray.map((arrayElement) => (
           <li>{arrayElement}</li>
         ))}
